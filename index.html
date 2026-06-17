@@ -11,6 +11,11 @@
     <meta property="og:description" content="Sınırlı sayıda üretilen premium siber giyim ürünlerini keşfet." />
     <meta property="og:image" content="logo.jpg" />
     <meta property="og:type" content="website" />
+    
+    <meta name="author" content="OĞUZ TECH" />
+    <meta name="robots" content="index, follow" />
+    <meta property="og:url" content="https://oguzkagancavdar1661.github.io/Oguz-Tech/" />
+    <meta property="og:locale" content="tr_TR" />
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -147,11 +152,11 @@
     </nav>
 
     <div id="mobileMenu" class="fixed inset-0 bg-[#0B111E] z-40 flex flex-col items-center justify-center space-y-8 font-cyber text-xl tracking-widest hidden opacity-0 transition-all duration-300">
-        <a href="#" onclick="toggleMobileMenu()" class="hover:text-[#00F0FF] transition">ANA SAYFA</a>
-        <a href="#products" onclick="toggleMobileMenu()" class="hover:text-[#00F0FF] transition">MAĞAZA</a>
-        <a href="#about" onclick="toggleMobileMenu()" class="hover:text-[#00F0FF] transition">HAKKIMIZDA</a>
-        <a href="#legal" onclick="toggleMobileMenu()" class="hover:text-[#00F0FF] transition">YASAL ŞARTLAR</a>
-        <button onclick="toggleMobileMenu(); scrollToProducts()" class="border border-[#00F0FF] text-[#00F0FF] px-6 py-2 text-sm tracking-widest rounded bg-[#00F0FF]/5">MAĞAZAYI GEZ</button>
+        <a href="#" onclick="autoCloseMobileMenu()" class="hover:text-[#00F0FF] transition">ANA SAYFA</a>
+        <a href="#products" onclick="autoCloseMobileMenu()" class="hover:text-[#00F0FF] transition">MAĞAZA</a>
+        <a href="#about" onclick="autoCloseMobileMenu()" class="hover:text-[#00F0FF] transition">HAKKIMIZDA</a>
+        <a href="#legal" onclick="autoCloseMobileMenu()" class="hover:text-[#00F0FF] transition">YASAL ŞARTLAR</a>
+        <button onclick="autoCloseMobileMenu(); scrollToProducts()" class="border border-[#00F0FF] text-[#00F0FF] px-6 py-2 text-sm tracking-widest rounded bg-[#00F0FF]/5">MAĞAZAYI GEZ</button>
     </div>
 
     <div class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
@@ -232,6 +237,31 @@
                 </div>
 
             </div>
+            
+            <div class="mt-24 max-w-4xl mx-auto border border-[rgba(0,240,255,0.15)] bg-[#111827]/40 p-8 rounded-xl backdrop-blur-md">
+                <div class="text-center mb-8">
+                    <span class="font-cyber text-[10px] text-[#00F0FF] tracking-widest uppercase">// CORE PROTOCOLS & LOGISTICS</span>
+                    <h3 class="font-cyber text-xl font-bold text-white uppercase mt-1">SİBER AYRICALIKLI SERVİSLERİMİZ</h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 font-cyber text-center">
+                    <div class="p-4 border border-slate-800/80 rounded-lg bg-[#0B111E]/40">
+                        <i class="fa-solid fa-shield-halved text-[#00F0FF] text-xl mb-2"></i>
+                        <h4 class="text-xs text-white uppercase tracking-wider font-bold">SİBER KORUMALI PAKET</h4>
+                        <p class="text-[11px] text-slate-400 mt-2 font-sans">Tüm siparişler elektromanyetik statik engelleyici, fütüristik özel siber ambalajlarla kaplanır.</p>
+                    </div>
+                    <div class="p-4 border border-slate-800/80 rounded-lg bg-[#0B111E]/40">
+                        <i class="fa-solid fa-bolt text-[#00F0FF] text-xl mb-2"></i>
+                        <h4 class="text-xs text-white uppercase tracking-wider font-bold">IŞIK HIZI SEVKİYAT</h4>
+                        <p class="text-[11px] text-slate-400 mt-2 font-sans">Merkezi sunucudan onaylanan sipariş kodları 24 saat içinde lojistik ağlarına deploy edilir.</p>
+                    </div>
+                    <div class="p-4 border border-slate-800/80 rounded-lg bg-[#0B111E]/40">
+                        <i class="fa-solid fa-terminal text-[#00F0FF] text-xl mb-2"></i>
+                        <h4 class="text-xs text-white uppercase tracking-wider font-bold">KOD DROP 02 PROJESİ</h4>
+                        <p class="text-[11px] text-slate-400 mt-2 font-sans">Çok yakında rüzgar geçirmez techwear siber ceketler ve kargo pantolon sistemleri yayında olacak.</p>
+                    </div>
+                </div>
+            </div>
+            
         </div>
     </div>
 
@@ -245,6 +275,49 @@
             <p class="text-slate-400 text-sm leading-relaxed">
                 Amacımız, geleceğin dijital çizgilerini ve neon enerjisini premium tekstil kalitesiyle bugün üzerinizde taşımaktır. Sınırlı sayıda üretilen her bir drop, tarzınızı tamamen geleceğe uyarlamak için kodlandı.
             </p>
+        </div>
+    </div>
+
+    <div id="contact-terminal" class="py-24 bg-[#0B111E] border-t border-[rgba(0,240,255,0.05)] relative">
+        <div class="container mx-auto px-6 max-w-xl">
+            <div class="text-center mb-10">
+                <span class="font-cyber text-[#00F0FF] text-xs tracking-widest block mb-1 uppercase">// SECURE CONTACT DATAFEED</span>
+                <h2 class="font-cyber text-2xl font-bold text-white uppercase">ŞİFRELİ TERMİNAL BAĞLANTISI</h2>
+                <p class="text-slate-400 text-xs mt-2">Özel sipariş talepleri veya sistemsel sorularınız için şifreli veri formunu doldurarak sunucu kuyruğuna aktarın.</p>
+            </div>
+            <form id="cyberContactForm" onsubmit="handleFormSubmit(event)" class="space-y-4 font-cyber text-xs">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-slate-400 mb-1.5">// USER_ID (AD SOYAD)</label>
+                        <input type="text" required class="w-full bg-[#111827] border border-[rgba(0,240,255,0.2)] text-white p-3.5 rounded focus:border-[#00F0FF] focus:outline-none tracking-widest placeholder-slate-600" placeholder="Örn: OĞUZ" />
+                    </div>
+                    <div>
+                        <label class="block text-slate-400 mb-1.5">// NET_NODE (E-POSTA)</label>
+                        <input type="email" required class="w-full bg-[#111827] border border-[rgba(0,240,255,0.2)] text-white p-3.5 rounded focus:border-[#00F0FF] focus:outline-none tracking-widest placeholder-slate-600" placeholder="user@node.com" />
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-slate-400 mb-1.5">// ENCRYPTED_MESSAGE (MESAJINIZ)</label>
+                    <textarea rows="4" required class="w-full bg-[#111827] border border-[rgba(0,240,255,0.2)] text-white p-3.5 rounded focus:border-[#00F0FF] focus:outline-none resize-none tracking-widest placeholder-slate-600" placeholder="Terminal komutunu yazın..."></textarea>
+                </div>
+                <button type="submit" class="w-full bg-[#00F0FF] text-[#0B111E] font-bold py-3.5 rounded tracking-widest uppercase text-xs hover:shadow-[0_0_15px_rgba(0,240,255,0.4)] transition duration-300">
+                    &lt; VERİYİ_SUNUCUYA_GÖNDER /&gt;
+                </button>
+                <div id="formFeedback" class="hidden text-center text-xs text-[#00F0FF] p-2 border border-[#00F0FF]/30 bg-[#00F0FF]/5 rounded tracking-wider animate-pulse">
+                    // VERİ PAKETİ BAŞARIYLA KUYRUĞA ALINDI!
+                </div>
+            </form>
+
+            <div class="mt-16 pt-12 border-t border-slate-800/60">
+                <div class="text-center mb-6">
+                    <span class="font-cyber text-[10px] text-[#00F0FF] tracking-widest uppercase">// DEPLOYED AGENTS REVIEW</span>
+                    <h4 class="font-cyber text-sm font-bold text-white uppercase mt-0.5">SİBER KULLANICI GERİBİLDİRİMLERİ</h4>
+                </div>
+                <div class="bg-[#111827]/40 border border-slate-800 p-4 rounded-lg text-center font-sans">
+                    <p class="text-xs italic text-slate-300">"Neon Matrix Hoodie'nin dikiş kalitesi ve baskı parlaklığı inanılmaz. Kargo korumalı kutuda geldi, kesinlikle tavsiye ederim."</p>
+                    <span class="block font-cyber text-[10px] text-[#00F0FF] tracking-wider mt-2 uppercase">// AGENT_KAGAN_1881</span>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -320,7 +393,7 @@
             
             <div id="content-delivery" class="legal-content text-slate-400 text-sm leading-relaxed space-y-2 text-center md:text-left">
                 <h4 class="text-white font-cyber font-bold mb-2">Teslimat ve Kargo Süreçleri</h4>
-                <p>Siparişleriniz güvenli siber paketleme standartlarında hazırlanarak 1-3 iş günü içerisinde kargo firmasına teslim edilir. Türkiye'nin her yerine gönderim mevcuttur. Kargo takip numaranız WhatsApp üzerinden sizlere iletilir.</p>
+                <p>Siparişleriniz güvenli siber paketleme standartlarında hazırlanarak 1-3 iş günü içerisinde kargo firmasına teslim edilir. Türkiye'nin her yerine gönderim mevcuttur. Kargo takip numaranız WhatsApp üzerinden sizlere iletım yapar.</p>
             </div>
             <div id="content-return" class="legal-content text-slate-400 text-sm leading-relaxed space-y-2 text-center md:text-left hidden">
                 <h4 class="text-white font-cyber font-bold mb-2">İade ve Değişim Şartları</h4>
@@ -335,6 +408,10 @@
 
     <footer class="bg-[#0B111E] border-t border-slate-800 py-12 px-6 text-center">
         <div class="flex flex-col sm:flex-row justify-center items-center gap-4 mb-6">
+            <a href="https://github.com/oguzkagancavdar1661/Oguz-Tech" target="_blank" class="text-slate-400 hover:text-[#00F0FF] transition flex items-center space-x-2 bg-slate-900/60 border border-slate-800 px-4 py-2 rounded-lg text-sm font-cyber tracking-widest text-[#00F0FF]">
+                <i class="fa-brands fa-github text-xl"></i>
+                <span>REPOSITORY // CODE</span>
+            </a>
             <a href="https://instagram.com/oguzkagancavdar1661" target="_blank" class="text-slate-400 hover:text-[#00F0FF] transition flex items-center space-x-2 bg-slate-900/60 border border-slate-800 px-4 py-2 rounded-lg text-sm font-cyber tracking-widest text-[#00F0FF]">
                 <i class="fa-brands fa-instagram text-xl"></i>
                 <span>@oguzkagancavdar1661</span>
@@ -393,6 +470,19 @@
                 icon.classList.add('fa-xmark');
                 document.body.style.overflow = 'hidden';
             } else {
+                menu.classList.add('opacity-0');
+                setTimeout(() => { menu.classList.add('hidden'); }, 300);
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // [ONARIM 4]: MOBİL MENÜ LİNKLERİNE TIKLANDIĞINDA EKRANIN KAPANMASI PROTOKOLÜ
+        function autoCloseMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const icon = document.getElementById('menuIcon');
+            if (!menu.classList.contains('hidden')) {
                 menu.classList.add('opacity-0');
                 setTimeout(() => { menu.classList.add('hidden'); }, 300);
                 icon.classList.remove('fa-xmark');
@@ -594,6 +684,17 @@
 
             document.getElementById(`content-${tabKey}`).classList.remove('hidden');
             document.getElementById(`tab-${tabKey}`).className = "px-4 py-2 text-xs sm:text-sm font-cyber tracking-wider border-b-2 border-[#00F0FF] text-[#00F0FF] transition-all";
+        }
+
+        // [ONARIM 2]: FORM GÖNDERME GERİBİLDİRİM MANUEL TETİKLEME FONKSİYONU
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            const feedback = document.getElementById('formFeedback');
+            feedback.classList.remove('hidden');
+            event.target.reset();
+            setTimeout(() => {
+                feedback.classList.add('hidden');
+            }, 4000);
         }
     </script>
 </body>
